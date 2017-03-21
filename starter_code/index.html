@@ -34,7 +34,7 @@
 				    	</select>
 					</div>
 					<div class="row formGroup">
-				    	<label for="mission">Misison Statement:</label>
+				    	<label for="mission">Mission Statement:</label>
 				    	<textarea id="mission" name="mission"></textarea>
 					</div>
 
@@ -103,26 +103,24 @@
 			results.className = 'container results';
 			main.appendChild(results);
 		};
-		/*
-		
-			Make a function that will create <section> element and append it to #main.
-			Give the new <section> classes of "container" and "results"
-			Put an <h1> inside it that says "A True Story:"
-			Don't append it until the form has been submitted.
-
-		*/
 
 
 		$("form").on("submit", function(event){
 
-		    // Stop the form from submitting
+		    event.preventDefault();
 
-	    	// Append the new <section> created above.
+		    makeResults();
 
+		    var name = $("#name").val();
+			 var verb1 = $("#verb-1").val();
+			 var mission = $("#mission").val();
+// Append the new <section> created above.''
+	    	$('.results').append("<p>").append("Once upon a time there was a Developer named " + name + ". " + name + " came to General Asssembly to " + verb1 + " the great mountain of programming knowledge." + '"' + mission + '"' + name + " shouted. " );
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
 
+				
 				"Once upon a time there was a Developer named NAME."
 
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
