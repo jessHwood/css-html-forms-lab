@@ -65,17 +65,20 @@ Every container, form, input, and button should have rounded corners.
 
 .formGroup {
 	width: 100%;
-	display: inline-block;
 }
 
-.formGroup label {
+.formGroup, label {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: block;
+	vertical-align: middle;
 }
 
-.check, .radio {
+#radio1, #radio2, #radio3, #check1, #check2, #check3 {
+	clear: none;
 	display: inline;
+	float: left;
+	margin: 20px;
 }
 /* 
 
